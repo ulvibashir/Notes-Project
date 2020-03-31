@@ -2,8 +2,8 @@ import React from 'react'
 
 export function Create() {
     return (
-        <div>
+        <h1>
             Create
-        </div>
+        </h1>
     )
 }
