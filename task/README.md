@@ -35,7 +35,7 @@ It should contain simple navigation bar with logo (picture is up to you) and 3 b
 The address string of this page should be dynamically changed depending of each item that user try to see.
 
 `/notes/1` = means that user is trying to see the information about Note item with `id` 1. 
-`/notes/44Ffhu2` = means that user is trying to see the information about Note item with `id` 44Ffhu2. 
+`/notes/44Ffhu2` = means that user is trying to see the information about Note item with `id` 44Ffhu2.
 
 And so on.
 
