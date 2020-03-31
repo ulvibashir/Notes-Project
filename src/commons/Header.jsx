@@ -4,6 +4,40 @@ import { NavLink } from 'react-router-dom'
 import {pen, archive} from '../styles/icons'
 import { COLORS } from './colors'
 
+
+
+// // Array
+// const newNumbers = [1,2,3,4,5,7];
+
+
+
+// // Function
+// function callBack(accumulator, currentValue) {
+//     console.log('The value of accumulator', accumulator);
+//     console.log('The value of currentValue', currentValue);
+//     return accumulator + currentValue;
+// }
+
+
+
+// // Value
+// let initialValue = 10;
+
+
+// // Reducer
+// const newSum1 = newNumbers.reduce(callBack, 10)
+
+
+
+
+
+// const newSum = newNumbers.reduce((accumulator, currentValue) => {
+//     return accumulator + currentValue;
+// }, 10)
+
+
+
+
 export function Header() {
     return (
         <Container>
@@ -25,7 +59,7 @@ export function Header() {
                     additional={COLORS.additionalColor}
                     to='/archive'>
                     <Icon>
-                        <img src={archive} />
+                        <img src={archive} alt="archive-logo"/>
                     </Icon>
 
                     Archive</StyledNavLink>
@@ -36,7 +70,7 @@ export function Header() {
                     to='/create'>
                     
                     <Icon>
-                        <img src={pen}/>
+                        <img src={pen} alt="pen-logo"/>
                     </Icon>
                     Create
                     </StyledNavLink>
@@ -90,6 +124,8 @@ const StyledNavLink = styled(NavLink)`
     }
 
 `
+
+
 
 const Icon = styled.span`
     display: inline-flex;

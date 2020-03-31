@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import { Header } from './commons'
+import { NotesContextProvider} from './context/notesContext';
 import {
   Homepage,
   Create,
@@ -11,12 +12,14 @@ import {
 function App() {
   return (
     <Router>
-      <Header />
-      <Switch>
-        <Route exact path="/" component={Homepage} />
-        <Route path="/create" component={Create} />
-        <Route path="/archive" component={Archive} />
-      </Switch>
+      <NotesContextProvider>
+        <Header />
+        <Switch>
+          <Route exact path="/" component={Homepage} />
+          <Route path="/create" component={Create} />
+          <Route path="/archive" component={Archive} />
+        </Switch>
+      </NotesContextProvider>
     </Router>
   );
 }
