@@ -13,13 +13,14 @@ export function Homepage() {
     return (
         <Container>
             <Row>
-                {filteredNotes.map(({ id, title, text, date, color }) => <Note
+                {filteredNotes.map(({ id, title, text, date, color, isCompleted}) => <Note
                     key={id}
                     id={id}
                     title={title}
                     text={text}
                     date={date}
                     color={color}
+                    isCompleted={isCompleted}
                 />)}
             </Row>
 

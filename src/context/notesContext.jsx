@@ -25,7 +25,7 @@ const initialState = {
             text: "This is Sparta",
             date: Date.now(),
             color: "#d32727",
-            isCompleted: false
+            isCompleted: true
         },
         {
             id: uuid(),
@@ -41,7 +41,7 @@ const initialState = {
             text: "This is Uganda",
             date: Date.now(),
             color: "#ef8e0b",
-            isCompleted: false
+            isCompleted: true
         },
         {
             id: uuid(),

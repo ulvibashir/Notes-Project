@@ -19,7 +19,7 @@ export function Header() {
           to="/"
         >
         <Icon>
-            <img src={actual} />
+            <img src={actual} alt="actual-icon"/>
           </Icon>
           Actual
         </StyledNavLink>
@@ -28,7 +28,7 @@ export function Header() {
           to="/archive"
         >
           <Icon>
-            <img src={archive} />
+            <img src={archive} alt="archive-icon"/>
           </Icon>
           Archive
         </StyledNavLink>
@@ -37,7 +37,7 @@ export function Header() {
           to="/create"
         >
           <Icon>
-            <img src={pen} />
+            <img src={pen} alt="pen-icon" />
           </Icon>
           Create
         </StyledNavLink>
