@@ -1,37 +1,36 @@
 {
-    "notes": [
-        {
-            "id": 1,
-            "title": "Hello Mars",
-            "text": "This is Sparta",
-            "date": 1,
-            "color": "#d32727",
-            "isCompleted": true
-        },
-        {
-            "id": 2,
-            "title": "Hello Jupiter",
-            "text": "This is Corona",
-            "date": 1,
-            "color": "brown",
-            "isCompleted": false
-        },
-        {
-            "id": 3,
-            "title": "Hello Uganda",
-            "text": "This is Uganda",
-            "date": 1,
-            "color": "gray",
-            "isCompleted": true
-        },
-        {
-            "id": 4,
-            "title": "Hello Mozambik",
-            "text": "This is Mozambik bratan",
-            "date": 1,
-            "color": "purple",
-            "isCompleted": false
-        }
-    ]
-    
+  "notes": [
+    {
+      "id": "e8cc042-c34-1c85-b74-54ab48e2edc",
+      "date": 1585748959000,
+      "isCompleted": false,
+      "title": "Hello Mozambik",
+      "text": "How ",
+      "color": "#516f55"
+    },
+    {
+      "id": "61512-b0f-2b10-f6d-8b2e1bea6a4",
+      "date": 1585748983633,
+      "isCompleted": false,
+      "title": "Nice",
+      "text": "aue",
+      "color": "#d32727"
+    },
+    {
+      "id": "62e011-a68-3cd2-ccee-fa13d0db47c4",
+      "date": 1585749040550,
+      "isCompleted": false,
+      "title": "dfg",
+      "text": "dfg",
+      "color": "#ef8e0b"
+    },
+    {
+      "id": "306ba0f-cc57-411-f2db-b48871ccc5eb",
+      "date": 1585749117636,
+      "isCompleted": false,
+      "title": "nmb",
+      "text": "bnmnbm",
+      "color": "#d32727"
+    }
+  ]
 }
