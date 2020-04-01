@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 
 import { NotesContext } from '../../context/notesContext'
 import { Note } from '../../components'
-import { Row, Container } from '../../commons'
+import { Row, Container, Loader } from '../../commons'
 
 export function Homepage() {
 
@@ -12,16 +12,21 @@ export function Homepage() {
     
     return (
         <Container>
-            <Row>
-                {filteredNotes.map(({ id, title, text, date, color }) => <Note
-                    key={id}
-                    id={id}
-                    title={title}
-                    text={text}
-                    date={date}
-                    color={color}
-                />)}
-            </Row>
+            {notes.length !== 0 ?
+                <Row>
+                    {filteredNotes.map(({ id, title, text, date, color, isCompleted }) => <Note
+                        key={id}
+                        id={id}
+                        title={title}
+                        text={text}
+                        date={date}
+                        color={color}
+                        isCompleted={isCompleted}
+                    />)}
+                </Row>
+                :
+                <Loader />}
+
 
         </Container>
     )
