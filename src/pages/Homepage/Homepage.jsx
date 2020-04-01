@@ -27,8 +27,7 @@ export function Homepage() {
                 </Row>
                 :
                 <Loader />}
-            
-               <Route path="/notes/:id" component={SingleNoteItem}/>  
+                
         </Container>
 
                 
