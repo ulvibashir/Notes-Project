@@ -1,8 +1,5 @@
 export const COLORS = {
-    primaryColor: 'green',
-    additionalColor: 'blue'
+    primary: '#121f59',
+    stickyBackground: '#dfdcb8',
+    headerBackground: '#dbe9ff'
 }
-
-/*
-
-*/
