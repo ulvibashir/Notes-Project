@@ -1,9 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
-import { pen, archive } from "../styles/icons";
+
+import { pen, archive, actual } from "../styles/icons";
 import { COLORS } from "./colors";
-import { createGlobalStyle } from "styled-components";
+
 export function Header() {
   return (
     <Container>
@@ -13,16 +14,17 @@ export function Header() {
 
       <div>
         <StyledNavLink
-          primary={COLORS.primaryColor}
-          additional={COLORS.additionalColor}
+          border={COLORS.primary}
           exact
           to="/"
         >
+        <Icon>
+            <img src={actual} />
+          </Icon>
           Actual
         </StyledNavLink>
         <StyledNavLink
-          primary={COLORS.primaryColor}
-          additional={COLORS.additionalColor}
+          border={COLORS.primary}
           to="/archive"
         >
           <Icon>
@@ -31,8 +33,7 @@ export function Header() {
           Archive
         </StyledNavLink>
         <StyledNavLink
-          primary={COLORS.primaryColor}
-          additional={COLORS.additionalColor}
+          border={COLORS.primary}
           to="/create"
         >
           <Icon>
@@ -46,9 +47,6 @@ export function Header() {
 
 }
 
-/*
-
-*/
 const Container = styled.header`
   display: flex;
   align-items: center;
@@ -57,7 +55,7 @@ const Container = styled.header`
   min-width: 1160px;
   height: 60px;
 
-  background-color: #979998;
+  background-color: ${COLORS.headerBackground};
   div {
     display: flex;
     margin-right: 50px;
@@ -68,28 +66,27 @@ const Logo = styled.div`
   margin-left: 50px;
   font-family: "Ubuntu", sans-serif;
   font-size: 17px;
-  color: #121f59;
-  transition: all 0.3s;
-  
+  color: ${COLORS.primary};
 `;
 
 const StyledNavLink = styled(NavLink)`
-  color: white;
+  color: ${p => p.border};
   text-decoration: none;
   font-family: "Segoe UI";
   outline: none;
   transition: all 0.4s ease;
   margin: 0 25px;
-  padding: 3px 12px;
-  border: 2px solid transparent;
-  border-radius: 5px;
+  padding: 5px 15px;
+  border: 2px solid ${p => p.border};
+  border-radius: 15px;
 
-  ${"" /* border: 2px solid ${props => props.primary}; */}
-  &:hover {
-    color: ${props => props.additional};
-  }
   &.active {
-    border-color: red;
+    background-color: ${p => p.border};
+    color: #fff;
+  };
+
+  &:hover {
+    ${'' /* IDK */}
   }
 `;
 
@@ -102,7 +99,7 @@ const Icon = styled.span`
   width: 30px;
   height: 30px;
   text-align: center;
-  margin: -8px 0;
+  margin: -8px 5px;
 
   img {
     width: 50%;

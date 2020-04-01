@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from 'react'
-import uuid from 'uuid/v4'
+import uuid from "react-uuid";  // for unique id 
 export const NotesContext = createContext();
 
 
@@ -7,6 +7,7 @@ export const NotesContext = createContext();
 const ADD_NOTE = 'ADD_NOTE';
 const UPDATE_NOTE = 'UPDATE_NOTE';
 const DELETE_NOTE = 'DELETE_NOTE';
+
 
 function notesReducer (state, { type, payload }){
     switch(type){
@@ -16,9 +17,6 @@ function notesReducer (state, { type, payload }){
 }
 
 
-
-
-
 const initialState = {
     notes: [
         {
@@ -26,41 +24,34 @@ const initialState = {
             title: "Hello Mars",
             text: "This is Sparta",
             date: Date.now(),
-            checked: false,
-            color: "#d32727"
+            color: "#d32727",
+            isCompleted: false
         },
         {
             id: uuid(),
             title: "Hello Jupiter",
-            text: "This is Julyen",
+            text: "This is Corona",
             date: Date.now(),
-            checked: false,
-            color: "#d32727"
+            color: "#3a2c84",
+            isCompleted: false
         },
         {
             id: uuid(),
             title: "Hello Uganda",
             text: "This is Uganda",
             date: Date.now(),
-            checked: false,
-            color: "#d32727"
+            color: "#ef8e0b",
+            isCompleted: false
         },
         {
             id: uuid(),
             title: "Hello Mozambik",
             text: "This is Mozambik bratan",
             date: Date.now(),
-            checked: false,
-            color: "#d32727"
-        },
-        {
-            id: uuid(),
-            title: "Hello Mars",
-            text: "This is Sparta",
-            date: Date.now(),
-            checked: false,
-            color: "#d32727"
-        },
+            color: "#516f55",
+            isCompleted: false
+        }
+        
     ]
 }
 
