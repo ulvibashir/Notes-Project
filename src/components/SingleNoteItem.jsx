@@ -1,10 +1,34 @@
-import React from 'react'
-import styled from 'styled-components';
+import React, { useContext } from "react";
+import styled from "styled-components";
+
+import { NotesContext } from "../context/notesContext";
 
 export function SingleNoteItem({ id, title, text, date, color, isCompleted }) {
-    return (
-        <div>
-            {/* Single Note Item */}
-        </div>
-    )
+  const { notes } = useContext(NotesContext);
+  const note = notes.find(item => item.id == id);
+
+
+
+  return (
+    <div>
+      single item
+      {note && (
+        <SingleItem color={color}>
+          <p> {note.title}</p>
+          <p> {text}</p>
+          <p> {date}</p>
+          <p> {isCompleted}</p>
+        </SingleItem>
+      )}
+    </div>
+  );
 }
+
+const SingleItem = styled.div`
+  background-color: ${p => p.color};
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 80px;
+  width: 100px;
+`;

@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components';
-
+import {Link} from 'react-router-dom'
 import { COLORS } from '../commons/colors'
 
 export function Note({id, title, text, date, color, isCompleted}) {
     const dateTransformed = new Date(date);
     return (
-        <MainContainer>
+        <MainContainer to={`/notes/${id}`}>
             <MainHeader color={color} isCompleted={isCompleted}>
                 <Title text={isCompleted ? 'line-through' : 'none'}> {title} </Title>
                 {isCompleted && <Archive primary={COLORS.primary}>Make Actual</Archive>}
@@ -17,7 +17,7 @@ export function Note({id, title, text, date, color, isCompleted}) {
     )
 }
 
-const MainContainer = styled.div`
+const MainContainer = styled(Link)`
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
     background-color: ${COLORS.stickyBackground};
     height: 150px;

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import { Header } from './commons'
 import { NotesContextProvider} from './context/notesContext';
+
 import {
   Homepage,
   Create,
