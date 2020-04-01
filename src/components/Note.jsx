@@ -20,11 +20,16 @@ export function Note({id, title, text, date, color, isCompleted}) {
 const MainContainer = styled.div`
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
     background-color: ${COLORS.stickyBackground};
+    transition: all .3s ease;
     height: 150px;
     border-radius: 10px;
     color: white;
     cursor: pointer;
     overflow: hidden;
+    &:hover {
+        box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
+
+    }
         
 `
 const MainHeader = styled.div`

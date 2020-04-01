@@ -1,2 +1,4 @@
-export { Note } from './Note';
-export { SingleNoteItem } from './SingleNoteItem';
+
+export { Note } from './Note'
+export { Form } from './Form';
+
