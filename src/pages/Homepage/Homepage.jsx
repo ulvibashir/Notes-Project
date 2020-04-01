@@ -1,8 +1,8 @@
-import React, { useContext } from 'react'
+import React, { useContext } from 'react';
 
-import { NotesContext } from '../../context/notesContext'
-import { Note } from '../../components'
-import { Row, Container, Loader } from '../../commons'
+import { NotesContext } from '../../context/notesContext';
+import { Note, SingleNoteItem } from '../../components';
+import { Row, Container, Loader } from '../../commons';
 
 export function Homepage() {
 
@@ -26,8 +26,16 @@ export function Homepage() {
                 </Row>
                 :
                 <Loader />}
-
-
         </Container>
+
+
+        /* comment Container then uncomment this
+            <SingleNoteItem id={notes[0].id}
+                title={notes[0].title}
+                text={notes[0].text}
+                date={notes[0].date}
+                color={notes[0].color}
+                isCompleted={notes[0].isCompleted} ></SingleNoteItem>
+        */
     )
 }
