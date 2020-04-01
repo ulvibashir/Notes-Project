@@ -2,14 +2,13 @@ import React, { useContext } from 'react';
 import { Route } from 'react-router-dom';
 
 import { NotesContext } from '../../context/notesContext';
-import { Note, SingleNoteItem } from '../../components/index';
+import { Note, SingleNoteItem } from '../../components';
 import { Row, Container, Loader } from '../../commons';
 
 export function Homepage() {
 
     const { notes } = useContext(NotesContext);
     const filteredNotes = notes.filter(note => note.isCompleted === false)
-    console.log(filteredNotes);
     
     return (
      
@@ -28,11 +27,10 @@ export function Homepage() {
                 </Row>
                 :
                 <Loader />}
-            
-               <Route path="/notes/:id" component={SingleNoteItem}/>  
+                
         </Container>
 
-
+                
       //  comment Container then uncomment this
    
    /*   <div>

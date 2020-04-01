@@ -3,22 +3,25 @@ import styled from "styled-components";
 
 import { NotesContext } from "../context/notesContext";
 
-export function SingleNoteItem({ id, title, text, date, color, isCompleted }) {
+export function SingleNoteItem({ history: { push }, match: { params: { id } } }) {
  
   const { notes } = useContext(NotesContext);
   const note = notes.find(item => item.id == id);
+  console.log("single")
 
   return (
     <div>
       single item
       {note && (
-        <SingleItem color={color}>
-          <p> {title}</p>
-          <p> {text}</p>
-          <p> {date}</p>
-          <p> {isCompleted}</p>
+        <SingleItem color={note.color}>
+          <p> {note.title}</p>
+          <p> {note.text}</p>
+          <p> {note.date}</p>
+          <p> {note.isCompleted}</p>
         </SingleItem>
       )}
+
+      <button onClick={() => push('/')}> go back </button>
     </div>
   );
 }
