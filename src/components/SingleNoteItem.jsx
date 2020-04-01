@@ -7,7 +7,7 @@ export function SingleNoteItem({ id, title, text, date, color, isCompleted }) {
  
   const { notes } = useContext(NotesContext);
   const note = notes.find(item => item.id == id);
-
+  console.log("object")
   return (
     <div>
       single item

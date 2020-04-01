@@ -9,7 +9,6 @@ export function Homepage() {
 
     const { notes } = useContext(NotesContext);
     const filteredNotes = notes.filter(note => note.isCompleted === false)
-    console.log(filteredNotes);
     
     return (
      
@@ -32,7 +31,7 @@ export function Homepage() {
                <Route path="/notes/:id" component={SingleNoteItem}/>  
         </Container>
 
-
+                
       //  comment Container then uncomment this
    
    /*   <div>
