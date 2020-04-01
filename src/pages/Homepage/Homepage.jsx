@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { Route } from 'react-router-dom';
 
 import { NotesContext } from '../../context/notesContext';
-import { Note, SingleNoteItem } from '../../components/index';
+import { Note, SingleNoteItem } from '../../components';
 import { Row, Container, Loader } from '../../commons';
 
 export function Homepage() {
