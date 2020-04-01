@@ -4,17 +4,16 @@ import styled from "styled-components";
 import { NotesContext } from "../context/notesContext";
 
 export function SingleNoteItem({ id, title, text, date, color, isCompleted }) {
+ 
   const { notes } = useContext(NotesContext);
   const note = notes.find(item => item.id == id);
-
-
 
   return (
     <div>
       single item
       {note && (
         <SingleItem color={color}>
-          <p> {note.title}</p>
+          <p> {title}</p>
           <p> {text}</p>
           <p> {date}</p>
           <p> {isCompleted}</p>
