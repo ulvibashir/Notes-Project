@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import {Link} from 'react-router-dom'
 
 import { COLORS } from '../commons/colors'
-import { editNoteApi } from '../API/fetchAPI'
 
 export function Note({id, title, text, date, color, isCompleted}) {
     const dateTransformed = new Date(date);
