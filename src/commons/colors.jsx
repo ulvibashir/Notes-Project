@@ -5,5 +5,6 @@ export const COLORS = {
     radio1: '#d32727',
     radio2: '#3a2c84',
     radio3: '#ef8e0b',
-    radio4: '#516f55'
+    radio4: '#516f55',
+    buttonBackground: '#f5f5f5'
 }

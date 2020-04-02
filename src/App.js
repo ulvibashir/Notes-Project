@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
-import { SingleNoteItem } from './components'
+import { SingleNoteItem,Form } from './components'
 import { Header } from './commons'
 import { NotesContextProvider} from './context/notesContext';
 
@@ -21,6 +21,7 @@ function App() {
           <Route path="/create" component={Create} />
           <Route path="/archive" component={Archive} />
           <Route path="/notes/:id" component={SingleNoteItem}/>  
+          <Route path="/form" component={Form}/>  
         </Switch>
       </NotesContextProvider>
     </Router>

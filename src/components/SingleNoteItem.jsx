@@ -6,7 +6,7 @@ import { NotesContext } from "../context/notesContext";
 export function SingleNoteItem({ history: { push }, match: { params: { id } } }) {
  
   const { notes } = useContext(NotesContext);
-  const note = notes.find(item => item.id == id);
+  const note = notes.find(item => item.id === id);
   console.log("single")
 
   return (
