@@ -15,7 +15,7 @@ export function Form({
         text: '',
         color: '',
         ...initial
-  })
+      })
 
   const validate = () => {
    return fields.title && fields.text && fields.color
