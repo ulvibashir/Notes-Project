@@ -19,6 +19,7 @@ export function SingleItemView({
     }
 
     const onSubmit = (fields) => {
+        // edit clicked 
         const newNote = {
             id: note.id,
             date: note.date,
@@ -34,8 +35,6 @@ export function SingleItemView({
                 push('/');
             }
         })();
-
-
 
 
         // send request to local reducer
