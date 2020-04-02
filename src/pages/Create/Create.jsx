@@ -4,6 +4,7 @@ import uuid from "react-uuid";
 import { NotesContext } from '../../context/notesContext'
 import { Form } from '../../components/';
 import { addNoteApi } from '../../API/fetchAPI'
+
 export function Create({ history }) {
   const { addNote } = useContext(NotesContext);
 
@@ -14,7 +15,6 @@ export function Create({ history }) {
       isCompleted: false,
       ...note
     }
-    console.log(newNote);
     addNote(newNote);
 
     (async () => {
@@ -28,7 +28,6 @@ export function Create({ history }) {
 
 
   return (
-    
     <Form isEdit={false} onSubmit={onSubmit}/>
   );
 }

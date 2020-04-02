@@ -10,6 +10,7 @@ const ADD_NOTE = "ADD_NOTE";
 const UPDATE_NOTE = "UPDATE_NOTE";
 const DELETE_NOTE = "DELETE_NOTE";
 const ARCHIVE_NOTE = "ARCHIVE_NOTE";
+
 // Action creators
 const setNoteA = payload => ({
   type: SET_NOTE,
@@ -25,6 +26,7 @@ const editNoteA = payload => ({
   type: UPDATE_NOTE,
   payload
 });
+
 const deleteNoteA = payload => ({
   type: DELETE_NOTE,
   payload
@@ -34,6 +36,7 @@ const archiveNoteA = payload => ({
   type: ARCHIVE_NOTE,
   payload
 });
+
 // Reducer
 function notesReducer(state, { type, payload }) {
   switch (type) {
@@ -48,11 +51,10 @@ function notesReducer(state, { type, payload }) {
         notes: [...state.notes, ...payload]
       };
     case UPDATE_NOTE:
-      console.log(state);
       return {
         ...state,
         notes: state.notes.map(note =>
-          note.id == payload.id
+          note.id === payload.id
             ? {
                 ...note,
                 title: payload.title,
@@ -70,7 +72,7 @@ function notesReducer(state, { type, payload }) {
     case ARCHIVE_NOTE:
       return {
         ...state,
-        notes: state.notes.map(note => note.id == payload.id ?
+        notes: state.notes.map(note => note.id === payload.id ?
             {
                 ...note,
                 isCompleted: !payload.isCompleted

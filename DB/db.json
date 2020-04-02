@@ -2,11 +2,11 @@
   "notes": [
     {
       "id": "4db6fc1-53cb-8a7a-0da6-e708ebe7ac0",
+      "date": 1585829739595,
+      "isCompleted": false,
       "title": "alekto movik movik",
       "text": ":D",
-      "date": 1585829739595,
-      "color": "#3a2c84",
-      "isCompleted": false
+      "color": "#3a2c84"
     },
     {
       "id": "3a7af0c-ad4a-15d2-2ec6-b2f002355a",
@@ -18,11 +18,11 @@
     },
     {
       "id": "b5d61c6-c602-ca6-6c55-2a07afe022b5",
+      "date": 1585829765686,
+      "isCompleted": false,
       "title": "salaam",
       "text": "shayaam",
-      "date": 1585829765686,
-      "color": "#516f55",
-      "isCompleted": false
+      "color": "#516f55"
     },
     {
       "id": "b266caf-4d58-2bb-f12-7473583c4f23",
@@ -41,12 +41,12 @@
       "color": "#516f55"
     },
     {
-      "id": "b5d6440-6256-5d3c-2d1b-e4acff3b71a",
-      "date": 1585845622229,
-      "isCompleted": true,
-      "title": "asas",
-      "text": "saass",
-      "color": "#3a2c84"
+      "id": "1fa7c2d-34da-ea02-08-e04e1125e30d",
+      "date": 1585857529784,
+      "isCompleted": false,
+      "title": "A bucu bucu",
+      "text": "chick chick",
+      "color": "#d32727"
     }
   ]
 }

@@ -10,7 +10,7 @@ export function SingleNoteItem({ push, id, onEdit, onArchive }) {
 
   const [isModalActive, setIsModalActive] = useState(false);
   const { notes, deleteNote } = useContext(NotesContext);
-  const note = !!notes ? notes.find(item => item.id == id) : null;
+  const note = !!notes ? notes.find(item => item.id === id) : null;
 
   const toggleModal = () => {
     setIsModalActive(isModalActive => !isModalActive)
