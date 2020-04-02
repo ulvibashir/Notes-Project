@@ -7,7 +7,7 @@ import { COLORS } from '../commons/colors';
 
 export function Form({
     initial = {},
-    header,
+    isEdit,
     onSubmit }) {
 
     const [fields, setFields] = useState({
@@ -30,13 +30,16 @@ export function Form({
 
   const onSubmitBtnClick = (e) => {
     e.preventDefault();
-    if(validate()){
-      onSubmit({
-        title: fields.title,
-        text: fields.text,
-        color: fields.color
-      })
-    }
+
+    
+      if(validate()){
+        onSubmit({
+          title: fields.title,
+          text: fields.text,
+          color: fields.color
+        })
+      }
+    
   }
 /* 
   (async () => {
@@ -64,7 +67,7 @@ export function Form({
   return (
     <Container>
       <FormContainer onSubmit={onSubmitBtnClick}>
-        <Header>{header}</Header>
+        <Header>{isEdit ? 'Edit Note' : 'Create Note'}</Header>
         <TextInput
           name="title"
           type="text"
@@ -121,7 +124,12 @@ export function Form({
             <RadioSpan color={COLORS.radio4}></RadioSpan>
           </Label>
         </ColorContainer>
-        <Button>CREATE</Button>
+
+        
+          <Button>{isEdit ? 'SAVE' : 'CREATE'}</Button>
+          
+        
+
       </FormContainer>
     </Container>
 

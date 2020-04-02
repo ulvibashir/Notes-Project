@@ -29,7 +29,7 @@ export function Create({ history }) {
 
   return (
     
-    <Form header="Create Note" onSubmit={onSubmit}/>
+    <Form isEdit={false} onSubmit={onSubmit}/>
   );
 }
 

@@ -1,15 +1,19 @@
 import React from 'react'
 import styled from 'styled-components';
 import {Link} from 'react-router-dom'
+
 import { COLORS } from '../commons/colors'
+import { editNoteApi } from '../API/fetchAPI'
 
 export function Note({id, title, text, date, color, isCompleted}) {
     const dateTransformed = new Date(date);
+    
+
     return (
         <MainContainer to={`/notes/${id}`}>
             <MainHeader color={color} isCompleted={isCompleted}>
                 <Title text={isCompleted ? 'line-through' : 'none'}> {title} </Title>
-                {isCompleted && <Archive primary={COLORS.primary}>Make Actual</Archive>}
+              
             </MainHeader>
             <DateStyled>  {dateTransformed.toLocaleString()} </DateStyled>
             <Text> {text}</Text>
@@ -18,7 +22,7 @@ export function Note({id, title, text, date, color, isCompleted}) {
 }
 
 const MainContainer = styled(Link)`
-  display:block;
+    display:block;
     text-decoration: none;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
     background-color: ${COLORS.stickyBackground};
@@ -74,19 +78,19 @@ const DateStyled = styled.div`
     margin: 0 10px;
 `
 
-const Archive = styled.button`
-    font-family: Arial;
-    font-size: 13px;
-    padding: 5px; 
-    border: 1px solid #fff;
-    outline: none;
-    cursor: pointer;
-    background: transparent;
-    color: #fff;
-    transition: all .4s ease;
-    &:hover {
-        border-color: ${p => p.primary};
-        color: ${p => p.primary};
-    }
-`
+// const Archive = styled.button`
+//     font-family: Arial;
+//     font-size: 13px;
+//     padding: 5px; 
+//     border: 1px solid #fff;
+//     outline: none;
+//     cursor: pointer;
+//     background: transparent;
+//     color: #fff;
+//     transition: all .4s ease;
+//     &:hover {
+//         border-color: ${p => p.primary};
+//         color: ${p => p.primary};
+//     }
+// `
 
