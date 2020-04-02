@@ -9,7 +9,7 @@ const SET_NOTE = "SET_NOTE";
 const ADD_NOTE = "ADD_NOTE";
 const UPDATE_NOTE = "UPDATE_NOTE";
 const DELETE_NOTE = "DELETE_NOTE";
-
+const ARCHIVE_NOTE = "ARCHIVE_NOTE";
 // Action creators
 const setNoteA = payload => ({
   type: SET_NOTE,
@@ -29,6 +29,11 @@ const deleteNoteA = payload => ({
   type: DELETE_NOTE,
   payload
 });
+
+const archiveNoteA = payload => ({
+  type: ARCHIVE_NOTE,
+  payload
+});
 // Reducer
 function notesReducer(state, { type, payload }) {
   switch (type) {
@@ -42,17 +47,34 @@ function notesReducer(state, { type, payload }) {
         ...state,
         notes: [...state.notes, ...payload]
       };
-    // case UPDATE_NOTE:
-    //     console.log(state);
-    //     return{
-    //         ...state,
-    //         notes: 
-
-    //     }
+    case UPDATE_NOTE:
+      console.log(state);
+      return {
+        ...state,
+        notes: state.notes.map(note =>
+          note.id == payload.id
+            ? {
+                ...note,
+                title: payload.title,
+                text: payload.text,
+                color: payload.color
+              }
+            : note
+        )
+      };
     case DELETE_NOTE:
       return {
-        ...state, 
-        notes: state.notes.filter((note) => note.id !== payload.id)
+        ...state,
+        notes: state.notes.filter(note => note.id !== payload.id)
+      };
+    case ARCHIVE_NOTE:
+      return {
+        ...state,
+        notes: state.notes.map(note => note.id == payload.id ?
+            {
+                ...note,
+                isCompleted: !payload.isCompleted
+            } : note)
       };
     default:
       return state;
@@ -77,6 +99,15 @@ export const NotesContextProvider = ({ children }) => {
   const deleteNote = payload => {
     dispatch(deleteNoteA(payload));
   };
+
+  const editNote = payload => {
+    dispatch(editNoteA(payload));
+  };
+
+  const archiveNote = payload => {
+    dispatch(archiveNoteA(payload));
+  };
+
   useEffect(() => {
     (async () => {
       const response = await getNotes();
@@ -85,7 +116,7 @@ export const NotesContextProvider = ({ children }) => {
   }, []);
 
   return (
-    <NotesContext.Provider value={{ ...state, addNote, deleteNote }}>
+    <NotesContext.Provider value={{ ...state, addNote, deleteNote, editNote, archiveNote }}>
       {children}
     </NotesContext.Provider>
   );

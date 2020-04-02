@@ -27,20 +27,6 @@ export function SingleNoteItem({ push, id, onEdit, onArchive }) {
     deleteNote(note);
 
 
-    // (async () => {
-    //   const res = await fetch(`http://localhost:3002/notes/${id}`, {
-    //     method: "DELETE",
-    //     headers: {
-    //       "Content-Type": "application/json"
-    //     }
-    //   });
-    //   const data = await res.json();
-    //   if (data) {
-    //     push("/");
-    //   }
-    // })();
-
-
   };
 
   return (
