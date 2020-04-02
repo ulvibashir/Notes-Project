@@ -1,12 +1,11 @@
 import React from 'react'
 import styled from 'styled-components';
-import { Link } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import { COLORS } from '../commons/colors'
 
 export function Note({id, title, text, date, color, isCompleted}) {
     const dateTransformed = new Date(date);
     return (
-        
         <MainContainer to={`/notes/${id}`}>
             <MainHeader color={color} isCompleted={isCompleted}>
                 <Title text={isCompleted ? 'line-through' : 'none'}> {title} </Title>
@@ -15,14 +14,11 @@ export function Note({id, title, text, date, color, isCompleted}) {
             <DateStyled>  {dateTransformed.toLocaleString()} </DateStyled>
             <Text> {text}</Text>
         </MainContainer>
-        
-
     )
 }
 
-
 const MainContainer = styled(Link)`
-    display:block;
+  display:block;
     text-decoration: none;
     box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
     background-color: ${COLORS.stickyBackground};
@@ -34,7 +30,6 @@ const MainContainer = styled(Link)`
     overflow: hidden;
     &:hover {
         box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
-
     }
         
 `

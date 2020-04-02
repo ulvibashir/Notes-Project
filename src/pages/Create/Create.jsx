@@ -14,6 +14,7 @@ export function Create({ history }) {
       isCompleted: false,
       ...note
     }
+    console.log(newNote);
     addNote(newNote);
 
     (async () => {

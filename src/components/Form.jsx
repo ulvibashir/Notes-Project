@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState,useContext } from "react";
 import styled from "styled-components";
 
 import { Container } from '../commons/Container';
 import { COLORS } from '../commons/colors';
+
 
 export function Form({
     initial = {},
@@ -16,7 +17,7 @@ export function Form({
         ...initial
   })
 
- const validate = () => {
+  const validate = () => {
    return fields.title && fields.text && fields.color
  }
   const onChangeHandler = (e) => {
@@ -37,11 +38,27 @@ export function Form({
       })
     }
   }
+/* 
+  (async () => {
+    const res = await fetch(`http://localhost:3002/notes/${id}`,{
+      method: 'PUT',
+      body: JSON.stringify(
+        {
+          title: fields.title,
+          text: fields.text,
+          color: fields.color
+        }
+      ),
+      headers: {
+        "Content-Type": 'application/json'
+      }
+  })
+  const data = await res.json()
+
+  })()
 
 
-
-
-
+ */
 
 
   return (
