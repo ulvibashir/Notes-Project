@@ -1,4 +1,4 @@
-import React, { useState,useContext } from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 import { Container } from '../commons/Container';
@@ -6,20 +6,35 @@ import { COLORS } from '../commons/colors';
 
 
 export function Form({
-    initial = {},
-    isEdit,
-    onSubmit }) {
+  initial = {},
+  isEdit,
+  onSubmit }) {
 
-    const [fields, setFields] = useState({
-        title: '',
-        text: '',
-        color: '',
-        ...initial
+  const [fields, setFields] = useState({
+    title: '',
+    text: '',
+    color: '',
+    ...initial
   })
 
   const validate = () => {
-   return fields.title && fields.text && fields.color
- }
+    return fields.title && fields.text
+  }
+
+  function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+  }
+
+  const getRandomColor = () => {
+    let colors = [];
+    for( let key in COLORS ) {
+      if(key.includes('radio')){
+        colors.push(COLORS[key]);
+      }
+    }
+    return colors[getRandom(0, colors.length - 1)];
+  }
+
   const onChangeHandler = (e) => {
     const { name, value } = e.target;
     setFields(fields => ({
@@ -30,38 +45,37 @@ export function Form({
 
   const onSubmitBtnClick = (e) => {
     e.preventDefault();
+    
+    if (validate()) {
+      onSubmit({
+        title: fields.title,
+        text: fields.text,
+        color: fields.color || getRandomColor()
+      })
+    }
 
-    
-      if(validate()){
-        onSubmit({
-          title: fields.title,
-          text: fields.text,
-          color: fields.color
-        })
-      }
-    
   }
-/* 
-  (async () => {
-    const res = await fetch(`http://localhost:3002/notes/${id}`,{
-      method: 'PUT',
-      body: JSON.stringify(
-        {
-          title: fields.title,
-          text: fields.text,
-          color: fields.color
+  /* 
+    (async () => {
+      const res = await fetch(`http://localhost:3002/notes/${id}`,{
+        method: 'PUT',
+        body: JSON.stringify(
+          {
+            title: fields.title,
+            text: fields.text,
+            color: fields.color
+          }
+        ),
+        headers: {
+          "Content-Type": 'application/json'
         }
-      ),
-      headers: {
-        "Content-Type": 'application/json'
-      }
-  })
-  const data = await res.json()
-
-  })()
-
-
- */
+    })
+    const data = await res.json()
+  
+    })()
+  
+  
+   */
 
 
   return (
@@ -125,10 +139,10 @@ export function Form({
           </Label>
         </ColorContainer>
 
-        
-          <Button>{isEdit ? 'SAVE' : 'CREATE'}</Button>
-          
-        
+
+        <Button>{isEdit ? 'SAVE' : 'CREATE'}</Button>
+
+
 
       </FormContainer>
     </Container>

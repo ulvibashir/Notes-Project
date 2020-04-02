@@ -13,7 +13,7 @@ export function SingleItemView({
 }) {
     const [isEdit, setIsEdit] = useState(false)
     const { notes, editNote, archiveNote } = useContext(NotesContext);
-    const note = !!notes ? notes.find(item => item.id == id) : null;
+    const note = !!notes ? notes.find(item => item.id === id) : null;
     const onEdit = () => {
         setIsEdit(isEdit => !isEdit)
     }
@@ -52,7 +52,6 @@ export function SingleItemView({
                 push('/');
             }
         })()
-        console.log(note);
         archiveNote(note);
 
     }
