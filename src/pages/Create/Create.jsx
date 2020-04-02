@@ -14,6 +14,7 @@ export function Create({ history }) {
       isCompleted: false,
       ...note
     }
+    console.log(newNote);
     addNote(newNote);
 
     (async () => {
@@ -28,7 +29,7 @@ export function Create({ history }) {
 
   return (
     
-    <Form header="Create Note" onSubmit={onSubmit}/>
+    <Form isEdit={false} onSubmit={onSubmit}/>
   );
 }
 

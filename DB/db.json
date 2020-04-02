@@ -1,35 +1,51 @@
 {
   "notes": [
     {
-      "id": "e8cc042-c34-1c85-b74-54ab48e2edc",
-      "date": 1585748959000,
-      "isCompleted": false,
-      "title": "Hello Mozambik",
-      "text": "How ",
-      "color": "#516f55"
+      "id": "4db6fc1-53cb-8a7a-0da6-e708ebe7ac0",
+      "title": "alekto movik movik",
+      "text": ":D",
+      "date": 1585829739595,
+      "color": "#3a2c84",
+      "isCompleted": false
     },
     {
-      "id": "61512-b0f-2b10-f6d-8b2e1bea6a4",
-      "date": 1585748983633,
+      "id": "3a7af0c-ad4a-15d2-2ec6-b2f002355a",
+      "date": 1585829756781,
       "isCompleted": false,
-      "title": "Nice",
-      "text": "aue",
+      "title": "Hi",
+      "text": "vuhuuu",
       "color": "#d32727"
     },
     {
-      "id": "62e011-a68-3cd2-ccee-fa13d0db47c4",
-      "date": 1585749040550,
-      "isCompleted": false,
-      "title": "dfg",
-      "text": "dfg",
-      "color": "#ef8e0b"
+      "id": "b5d61c6-c602-ca6-6c55-2a07afe022b5",
+      "title": "salaam",
+      "text": "shayaam",
+      "date": 1585829765686,
+      "color": "#516f55",
+      "isCompleted": false
     },
     {
-      "id": "306ba0f-cc57-411-f2db-b48871ccc5eb",
-      "date": 1585749117636,
+      "id": "b266caf-4d58-2bb-f12-7473583c4f23",
+      "title": "Aviuc",
+      "text": "Bothasasdas",
+      "date": 1585837464907,
+      "color": "#d32727",
+      "isCompleted": false
+    },
+    {
+      "id": "aa3781-75d-d3a5-2afd-ee02e80d4",
+      "date": 1585842320636,
       "isCompleted": false,
-      "title": "nmb",
-      "text": "bnmnbm",
+      "title": "Yeap Mann",
+      "text": "Trueedfgdfg",
+      "color": "#516f55"
+    },
+    {
+      "id": "b5d6440-6256-5d3c-2d1b-e4acff3b71a",
+      "date": 1585845622229,
+      "isCompleted": false,
+      "title": "asasddfgdfg",
+      "text": "asdasddfgfdgdgdfsdasfdsf",
       "color": "#d32727"
     }
   ]
