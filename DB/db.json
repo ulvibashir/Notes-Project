@@ -11,7 +11,7 @@
     {
       "id": "3a7af0c-ad4a-15d2-2ec6-b2f002355a",
       "date": 1585829756781,
-      "isCompleted": false,
+      "isCompleted": true,
       "title": "Hi",
       "text": "vuhuuu",
       "color": "#d32727"
@@ -26,11 +26,11 @@
     },
     {
       "id": "b266caf-4d58-2bb-f12-7473583c4f23",
-      "title": "Aviuc",
-      "text": "Bothasasdas",
       "date": 1585837464907,
-      "color": "#d32727",
-      "isCompleted": false
+      "isCompleted": false,
+      "title": "Avici",
+      "text": "Both",
+      "color": "#d32727"
     },
     {
       "id": "aa3781-75d-d3a5-2afd-ee02e80d4",
@@ -43,10 +43,10 @@
     {
       "id": "b5d6440-6256-5d3c-2d1b-e4acff3b71a",
       "date": 1585845622229,
-      "isCompleted": false,
-      "title": "asasddfgdfg",
-      "text": "asdasddfgfdgdgdfsdasfdsf",
-      "color": "#d32727"
+      "isCompleted": true,
+      "title": "asas",
+      "text": "saass",
+      "color": "#3a2c84"
     }
   ]
 }
