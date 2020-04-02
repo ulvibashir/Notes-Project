@@ -79,7 +79,7 @@ const StyledNavLink = styled(NavLink)`
   padding: 5px 15px;
   border: 2px solid ${p => p.border};
   border-radius: 15px;
-  box-shadow: 0 0 7px 1px;
+  box-shadow: 0 0 2px 1px;
   &.active {
     background-color: ${p => p.border};
     color: #fff;
