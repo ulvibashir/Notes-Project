@@ -9,7 +9,7 @@ export function Header() {
   return (
     <Container>
       <Logo>
-        <h1>Notes App</h1>
+        <h1>My Notes</h1>
       </Logo>
 
       <div>
@@ -54,8 +54,6 @@ const Container = styled.header`
   width: 100%;
   min-width: 1160px;
   height: 70px;
-
-  ${'' /* background-color: ${COLORS.headerBackground}; */}
   background-color: transparent;
   border-bottom: 3px solid ${COLORS.primary};
 
