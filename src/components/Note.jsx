@@ -38,9 +38,11 @@ const MainContainer = styled(Link)`
 `
 const MainHeader = styled.div`
     padding: 7px 0;
-    border-radius: 10px 10px 0 0 ;
+    
     width: 100%;
     background-color: ${p => p.color};
+
+
     align-items: center;
     display: flex;
     justify-content: space-around;

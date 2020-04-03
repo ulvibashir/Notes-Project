@@ -84,7 +84,6 @@ const SingleItem = styled.div`
 const Header = styled.div`
   background-color: ${p => p.color};
   font-size: 19px;
-  border-radius: 20px 20px 0 0;
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 
@@ -120,12 +119,13 @@ const StyledBtn = styled.button`
   height: 40px;
   width: 120px;
   font-size: 18px;
-  border: 1px solid grey;
+  border: 3px solid grey;
   border-radius: 7px;
   background-color: white;
   cursor: pointer;
   outline: none;
   margin-bottom: 15px;
+  transition: all .3s ease;
   &:hover {
     color: ${COLORS.primary};
     border-color: ${COLORS.primary};

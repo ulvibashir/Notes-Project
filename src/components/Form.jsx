@@ -151,13 +151,14 @@ export function Form({
 }
 
 const FormContainer = styled.form`
+  background-color: #fff;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 400px;
   margin: 55px auto;
   padding: 15px 25px;
-  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
   border-radius: 10px;
 `;
 

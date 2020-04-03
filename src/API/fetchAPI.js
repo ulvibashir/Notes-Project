@@ -10,26 +10,15 @@ function fetchFabric(endpoint, method) {
         }
 
         let getParams = '';
-        if (method === 'DELETE') {
-            options.method = method;
-            getParams += `/${params['id']}`;
-        }
-        else if (method === 'PUT') {
-            options.method = method;
-            getParams += `/${params['id']}`;
-            options.body = JSON.stringify(params);
-        } 
-        else if (method !== 'GET') {
-            options.method = method;
-            options.body = JSON.stringify(params);
-        } 
-        else {
+        options.method = method;
+        if (method === 'DELETE' || method === 'PATCH' )  getParams += `/${params['id']}`;
+        if (method === 'POST' || method === 'PATCH')  options.body = JSON.stringify(params);
+        else if(method !== 'GET') {
             getParams += `?`
             for (let key in params) {
                 getParams += `${key}=${params[key]}&`;
             }
         }
-
         const res = await fetch(`${domain}${endpoint}${getParams}`, options);
         return res.json();
     }
@@ -38,5 +27,5 @@ function fetchFabric(endpoint, method) {
 export const getNotes = fetchFabric('/notes', "GET");
 export const addNoteApi = fetchFabric('/notes', "POST");
 export const deleteNoteApi = fetchFabric('/notes', "DELETE");
-export const editNoteApi = fetchFabric('/notes', "PUT");
+export const editNoteApi = fetchFabric('/notes', "PATCH");
 

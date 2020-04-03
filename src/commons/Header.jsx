@@ -53,9 +53,14 @@ const Container = styled.header`
   justify-content: space-between;
   width: 100%;
   min-width: 1160px;
-  height: 60px;
+  height: 70px;
 
-  background-color: ${COLORS.headerBackground};
+  ${'' /* background-color: ${COLORS.headerBackground}; */}
+  background-color: transparent;
+  border-bottom: 3px solid ${COLORS.primary};
+
+
+
   div {
     display: flex;
     margin-right: 50px;
@@ -86,7 +91,7 @@ const StyledNavLink = styled(NavLink)`
   };
 
   &:hover {
-    ${'' /* IDK */}
+    box-shadow: 0 0 10px;
   }
 `;
 
