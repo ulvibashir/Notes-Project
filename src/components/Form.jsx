@@ -55,27 +55,6 @@ export function Form({
     }
 
   }
-  /* 
-    (async () => {
-      const res = await fetch(`http://localhost:3002/notes/${id}`,{
-        method: 'PUT',
-        body: JSON.stringify(
-          {
-            title: fields.title,
-            text: fields.text,
-            color: fields.color
-          }
-        ),
-        headers: {
-          "Content-Type": 'application/json'
-        }
-    })
-    const data = await res.json()
-  
-    })()
-  
-  
-   */
 
 
   return (
@@ -156,30 +135,33 @@ const FormContainer = styled.form`
   flex-direction: column;
   align-items: center;
   width: 400px;
-  margin: 55px auto;
+  margin: auto;
   padding: 15px 25px;
   box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.5);
   border-radius: 10px;
+
 `;
 
 const Header = styled.div`
-  font-family: "Segoe UI";
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-size: 40px;
   width: 100%;
   text-align: center;
   font-weight: bold;
+  color: ${COLORS.headerColor};
 `;
 const TextInput = styled.input`
   margin-top: 20px;
   padding: 8px;
   width: 100%;
-  border: none;
+  border: 1px solid lightgrey;
   border-radius: 5px;
   outline: none;  
   font-size: 18px;
   transition: all .4s ease;
   box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
   &:focus {
+    border-color: ${COLORS.borderOnFocus};
     box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.5);
   }
 `;
@@ -190,13 +172,13 @@ const TextArea = styled.textarea`
   height: 140px;
   width: 100%;
   border-radius: 5px;
-  border: none;
+  border: 1px solid lightgrey;
   outline: none;  
   resize: none;
   transition: all .4s ease;
   box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.5);
   &:focus {
-    border-color: grey;
+    border-color: ${COLORS.borderOnFocus};
     box-shadow: 0px 0px 12px 0px rgba(0,0,0,0.5);
   }
 `;
@@ -221,13 +203,7 @@ const ColorLabel = styled.label`
 `;
 
 const Label = styled.label`
-  ${'' /* background-color: ${p => p.color};
-  display: block;
-  transition: all .4s;
-  border-radius: 100%;
-  width: 25px;
-  height: 25px;
-  cursor: pointer; */}
+
 `;
 const RadioSpan = styled.span`
   display: inline-block;
@@ -239,16 +215,6 @@ const RadioSpan = styled.span`
   transition: all 0.3s ease;
   cursor: pointer;
 
-  
-${'' /* 
-  display: block;
-  position: relative;
-  border: 1px solid transparent;
-  width: 25px;
-  height: 25px;
-  left: 0;
-  border-radius: 100%;
-  transition: all 0.3s; */}
 `;
 
 const RadioBtn = styled.input`
@@ -259,38 +225,25 @@ const RadioBtn = styled.input`
     box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.5);
   }
 
-  ${'' /* &:checked + ${RadioSpan} {
-    &::after {
-      content: "";
-      display: block;
-      width: 22px;
-      height: 22px;
-      border-radius: 100%;
-      border: 3px solid white;
-      top: -10%;
-      left: -9%;
-      position: absolute;
-      transition: all 0.3s;
-    }
-  } */}
 `;
 
 const Button = styled.button`
   margin: 20px 0;
-
   width: 100%;
   height: 40px;
   outline: none;
-  border: 1px solid grey;
+  border: 1.3px solid ${p =>COLORS.primary};
   background-color: #fff;
   border-radius: 7px;
   cursor: pointer;
-  font-size: 18px;
-  color: grey;
+  font-size: 17px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: ${p =>COLORS.primary};
   transition: .4s all;
 
   &:hover {
-    border-color: black;
-    color: black;
+    background: ${p =>COLORS.primary};
+    border-color: ${p =>COLORS.primary};
+    color:  white;
   }
 `;
