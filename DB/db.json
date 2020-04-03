@@ -11,7 +11,7 @@
     {
       "id": "3a7af0c-ad4a-15d2-2ec6-b2f002355a",
       "date": 1585829756781,
-      "isCompleted": true,
+      "isCompleted": false,
       "title": "Hi",
       "text": "vuhuuu",
       "color": "#d32727"
@@ -19,7 +19,7 @@
     {
       "id": "b5d61c6-c602-ca6-6c55-2a07afe022b5",
       "date": 1585829765686,
-      "isCompleted": false,
+      "isCompleted": true,
       "title": "salaam",
       "text": "shayaam",
       "color": "#516f55"
@@ -35,7 +35,7 @@
     {
       "id": "aa3781-75d-d3a5-2afd-ee02e80d4",
       "date": 1585842320636,
-      "isCompleted": false,
+      "isCompleted": true,
       "title": "Yeap Mann",
       "text": "Trueedfgdfg",
       "color": "#516f55"
